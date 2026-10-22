@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Cloud servers, physical & virtual infrastructure, CCTV, security and 24x7 support — delivered pan-India.">
 <meta name="twitter:image" content="https://res.cloudinary.com/dfjegeiip/image/upload/v1792532081/CloudBrothersTech_Gradient_Cloud_Logo_wjxgpv.png">
 <meta name="theme-color" content="#0A0E27">
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('cbt-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -844,6 +845,270 @@ header.scrolled{background:rgba(253,248,243,.92)}
   .brand-pill{ padding:15px 18px; min-width:106px; }
   .brand-mono{ font-size:15.5px; }
 }
+/* ================= DARK THEME: Graphite + Silver + Gold + Lightning ================= */
+#theme-toggle{width:40px;height:40px;flex-shrink:0;border-radius:50%;border:1px solid var(--line);background:rgba(128,128,140,.1);color:var(--white);font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:transform .25s,box-shadow .25s,border-color .25s}
+#theme-toggle:hover{transform:rotate(18deg) scale(1.1);border-color:var(--gold)}
+.lightning{display:none}
+
+:root[data-theme="dark"]{
+  --navy:#0B0B0F; --navy-2:#13131A; --navy-3:#1B1B24;
+  --cyan:#FFC83D;      /* primary = gold yellow */
+  --violet:#C9CED6;    /* secondary = silver */
+  --gold:#FFB020;
+  --emerald:#FFD966;
+  --white:#F4F5F7; --grey:#B6BBC6; --grey-dim:#8B909C;
+  --line:rgba(255,255,255,.09);
+  color-scheme:dark;
+}
+:root[data-theme="dark"] body{background:var(--navy)}
+:root[data-theme="dark"] #theme-toggle{box-shadow:0 0 14px rgba(255,200,61,.25);border-color:rgba(255,200,61,.35)}
+
+/* background: graphite + soft gold/silver aurora */
+:root[data-theme="dark"] .bg-field{
+  background:
+    radial-gradient(1100px 700px at 15% -10%, rgba(255,200,61,.10), transparent 60%),
+    radial-gradient(900px 600px at 90% 5%, rgba(201,206,214,.09), transparent 55%),
+    radial-gradient(700px 500px at 50% 105%, rgba(255,176,32,.08), transparent 60%),
+    linear-gradient(180deg,#0B0B0F,#101015 60%,#0B0B0F);
+  background-size:140% 140%;
+}
+:root[data-theme="dark"] .bg-field::after{opacity:.16}
+
+/* header / menus / floating UI */
+:root[data-theme="dark"] header{background:rgba(11,11,15,.72);border-bottom-color:rgba(255,200,61,.14)}
+:root[data-theme="dark"] header.scrolled{background:rgba(11,11,15,.92);box-shadow:0 8px 30px rgba(0,0,0,.5),0 1px 0 rgba(255,200,61,.18)}
+:root[data-theme="dark"] .nav-drop-panel{background:#13131A;box-shadow:0 20px 50px rgba(0,0,0,.6),0 0 24px rgba(255,200,61,.08)}
+:root[data-theme="dark"] #mobile-menu{background:rgba(14,14,19,.98)}
+:root[data-theme="dark"] #cm-panel{background:rgba(16,16,22,.95);box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 30px rgba(255,200,61,.12)}
+:root[data-theme="dark"] #page-back-btn,:root[data-theme="dark"] #to-top{background:rgba(16,16,22,.92);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+:root[data-theme="dark"] #cm-tip{background:#1B1B24;color:#F4F5F7;border:1px solid rgba(255,200,61,.35);box-shadow:0 0 20px rgba(255,200,61,.2)}
+:root[data-theme="dark"] .cm-msg.user{background:linear-gradient(135deg,rgba(255,200,61,.22),rgba(201,206,214,.14))}
+:root[data-theme="dark"] #cm-orb{color:#0B0B0F;box-shadow:0 0 28px rgba(255,200,61,.5)}
+:root[data-theme="dark"] #scroll-progress{background:linear-gradient(90deg,#FFB020,#FFC83D,#E8EAEE);box-shadow:0 0 12px rgba(255,200,61,.8)}
+
+/* buttons: glowing gold */
+:root[data-theme="dark"] .cta-btn{color:#0B0B0F;background:linear-gradient(90deg,#FFC83D,#E8EAEE,#FFB020);background-size:200% auto;box-shadow:0 0 18px rgba(255,200,61,.3)}
+:root[data-theme="dark"] .cta-btn:hover{box-shadow:0 10px 34px rgba(255,200,61,.55),0 0 0 1px rgba(255,255,255,.2)}
+:root[data-theme="dark"] .cta-ghost:hover{background:rgba(255,200,61,.08);box-shadow:0 0 20px rgba(255,200,61,.2)}
+
+/* hero: metallic shimmer headline + glow */
+:root[data-theme="dark"] .hero h1 span,
+:root[data-theme="dark"] .grad-text{
+  background:linear-gradient(90deg,#FFC83D,#F4F5F7,#C9CED6,#FFB020,#FFC83D);
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 14px rgba(255,200,61,.35));
+}
+:root[data-theme="dark"] .hero-visual-glow{background:radial-gradient(circle,rgba(255,200,61,.22),rgba(201,206,214,.10) 55%,transparent 75%)}
+:root[data-theme="dark"] .hero-visual-img{filter:drop-shadow(0 0 30px rgba(255,200,61,.28))}
+:root[data-theme="dark"] .stat-num{text-shadow:0 0 26px rgba(255,200,61,.5)}
+:root[data-theme="dark"] .section-head h2{
+  background:linear-gradient(180deg,#FFFFFF,#AEB4C0);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+:root[data-theme="dark"] .section-head h2::after{background:linear-gradient(90deg,#FFC83D,#C9CED6);box-shadow:0 0 12px rgba(255,200,61,.8)}
+
+/* cards: graphite glass + gold glow on hover */
+:root[data-theme="dark"] .svc-card,:root[data-theme="dark"] .svc-inc-card,:root[data-theme="dark"] .svc-step,
+:root[data-theme="dark"] .team-card,:root[data-theme="dark"] .founder-quote-card,:root[data-theme="dark"] .pv-item,
+:root[data-theme="dark"] .gallery-card{
+  background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  border-color:rgba(255,255,255,.09);
+}
+:root[data-theme="dark"] .svc-card:hover,:root[data-theme="dark"] .team-card:hover,
+:root[data-theme="dark"] .founder-quote-card:hover,:root[data-theme="dark"] .svc-inc-card:hover{
+  border-color:rgba(255,200,61,.55);box-shadow:0 0 0 1px rgba(255,200,61,.25),0 18px 44px rgba(255,200,61,.14);
+}
+:root[data-theme="dark"] .svc-card::after,:root[data-theme="dark"] .gallery-card::after,
+:root[data-theme="dark"] .team-card::before,:root[data-theme="dark"] .founder-quote-card::after{
+  background:radial-gradient(340px circle at var(--mx,50%) var(--my,0%),rgba(255,200,61,.16),transparent 60%);
+}
+:root[data-theme="dark"] .svc-icon{background:rgba(255,200,61,.12);color:#FFC83D;box-shadow:0 0 16px rgba(255,200,61,.15)}
+:root[data-theme="dark"] .svc-feat-list li::before{background:rgba(255,200,61,.14);color:#FFC83D}
+:root[data-theme="dark"] .cat-list li::before{background:rgba(255,200,61,.14);color:#FFC83D}
+:root[data-theme="dark"] .svc-chip{background:rgba(255,255,255,.04)}
+
+/* service category cards */
+:root[data-theme="dark"] .cat-cloud,:root[data-theme="dark"] .cat-automation,
+:root[data-theme="dark"] .cat-digital,:root[data-theme="dark"] .cat-wedding{
+  background:linear-gradient(160deg,#1A1A22,#121217);border:1px solid rgba(255,255,255,.08);
+}
+:root[data-theme="dark"] .cat-card:hover{box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 40px rgba(255,200,61,.18);border-color:rgba(255,200,61,.5)}
+:root[data-theme="dark"] .cat-media{background:linear-gradient(160deg,rgba(255,200,61,.06),rgba(201,206,214,.05))}
+:root[data-theme="dark"] .cat-icon{background:rgba(255,255,255,.06);box-shadow:0 0 18px rgba(255,200,61,.12)}
+:root[data-theme="dark"] .cat-arrow{background:#22222B;color:#FFC83D;box-shadow:0 0 16px rgba(255,200,61,.25)}
+:root[data-theme="dark"] .cat-arrow:hover{background:linear-gradient(135deg,#FFC83D,#E8EAEE);color:#0B0B0F}
+
+/* work cards */
+:root[data-theme="dark"] .wk-a,:root[data-theme="dark"] .wk-b,:root[data-theme="dark"] .wk-c,:root[data-theme="dark"] .wk-d,
+:root[data-theme="dark"] .wk-e,:root[data-theme="dark"] .wk-f,:root[data-theme="dark"] .wk-g,:root[data-theme="dark"] .wk-h,
+:root[data-theme="dark"] .wk-i{background:linear-gradient(160deg,#1B1B24,#121217);border:1px solid rgba(255,255,255,.08)}
+:root[data-theme="dark"] .work-card:hover{box-shadow:0 20px 44px rgba(0,0,0,.6),0 0 30px rgba(255,200,61,.16);border-color:rgba(255,200,61,.4)}
+
+/* smart solutions / dashboard mock */
+:root[data-theme="dark"] #smart-solutions{background:linear-gradient(160deg,#15151C,#0F0F14);border:1px solid rgba(255,255,255,.07)}
+:root[data-theme="dark"] .dash-mock{box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 40px rgba(255,200,61,.1)}
+:root[data-theme="dark"] .smart-tag,:root[data-theme="dark"] .smart-float{background:#1B1B24;box-shadow:0 0 20px rgba(255,200,61,.12)}
+:root[data-theme="dark"] .dash-ring{background:conic-gradient(#FFC83D 0 70%,rgba(255,255,255,.1) 0)}
+
+/* brands, leadership, process, CTA, footer */
+:root[data-theme="dark"] .brand-pill{background:#15151B}
+:root[data-theme="dark"] .brand-pill:hover{border-color:rgba(255,200,61,.5);box-shadow:0 14px 34px rgba(255,200,61,.16)}
+:root[data-theme="dark"] .brand-ic{color:#0B0B0F}
+:root[data-theme="dark"] .leadership-panel{background:linear-gradient(160deg,rgba(255,200,61,.07),rgba(201,206,214,.05));border-color:rgba(255,200,61,.25);box-shadow:0 36px 80px rgba(0,0,0,.6)}
+:root[data-theme="dark"] .leader-card{background:#15151B;border-color:rgba(255,255,255,.09) !important;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+:root[data-theme="dark"] .founder-card{box-shadow:0 0 0 1px rgba(255,200,61,.3),0 0 50px rgba(255,200,61,.22) !important}
+:root[data-theme="dark"] .leader-badge{color:#0B0B0F}
+:root[data-theme="dark"] .team-avatar{color:#0B0B0F;background:linear-gradient(135deg,#FFC83D,#C9CED6)}
+:root[data-theme="dark"] .team-avatar::after{border-color:rgba(255,200,61,.45)}
+:root[data-theme="dark"] .dark-band{background:linear-gradient(160deg,#14141A,#0D0D11);border:1px solid rgba(255,200,61,.14);box-shadow:0 0 60px rgba(255,200,61,.06)}
+:root[data-theme="dark"] .dark-band .proc-num{background:#0D0D11;box-shadow:0 0 14px rgba(255,200,61,.3)}
+:root[data-theme="dark"] .proc-num{box-shadow:0 0 14px rgba(255,200,61,.3)}
+:root[data-theme="dark"] .tl-item::before{box-shadow:0 0 0 4px rgba(255,200,61,.18),0 0 14px rgba(255,200,61,.7)}
+:root[data-theme="dark"] .cta-band{
+  background:linear-gradient(135deg,#17171E,#0E0E13);border:1px solid rgba(255,200,61,.4);
+  box-shadow:0 0 60px rgba(255,200,61,.15),inset 0 0 60px rgba(255,200,61,.05);
+}
+:root[data-theme="dark"] .cta-band h2{color:#fff;text-shadow:0 0 24px rgba(255,200,61,.35)}
+:root[data-theme="dark"] .cta-band p{color:var(--grey)}
+:root[data-theme="dark"] .cta-band .cta-btn{background:linear-gradient(90deg,#FFC83D,#E8EAEE,#FFB020);color:#0B0B0F}
+:root[data-theme="dark"] .cta-band .cta-ghost{border-color:rgba(255,255,255,.3);color:#fff}
+:root[data-theme="dark"] .ft{background:#07070A}
+:root[data-theme="dark"] .ft-line{background:linear-gradient(90deg,transparent,#FFC83D,#E8EAEE,#FFB020,transparent);background-size:200% 100%;box-shadow:0 0 16px rgba(255,200,61,.6)}
+:root[data-theme="dark"] .ft-addr{background:linear-gradient(160deg,rgba(255,200,61,.08),rgba(201,206,214,.06))}
+
+/* ⚡ LIGHTNING (JS adds the .lightning layer) */
+:root[data-theme="dark"] .lightning{display:block;position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.lightning svg{position:absolute;inset:0;width:100%;height:100%}
+.bolt{fill:none;stroke:#FFE08A;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;opacity:0;
+  filter:drop-shadow(0 0 6px #FFC83D) drop-shadow(0 0 18px rgba(255,200,61,.8)) drop-shadow(0 0 40px rgba(255,200,61,.5))}
+.bolt.b1{animation:boltFlash 7s infinite}
+.bolt.b2{animation:boltFlash 11s 3s infinite}
+.bolt.b3{animation:boltFlash 9s 5.5s infinite}
+.bolt-flash{position:absolute;inset:0;opacity:0;background:radial-gradient(900px 600px at 50% 0%,rgba(255,215,100,.14),transparent 65%);animation:flashBg 7s infinite}
+@keyframes boltFlash{0%,84%,100%{opacity:0}85%{opacity:.95}86%{opacity:.15}87%{opacity:1}89%{opacity:.25}90%{opacity:.7}93%{opacity:0}}
+@keyframes flashBg{0%,84%,100%{opacity:0}85%{opacity:1}86%{opacity:.2}87%{opacity:.9}93%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.bolt,.bolt-flash{animation:none}}
+:root[data-theme="dark"] .boot-bar{background:rgba(255,255,255,.14)}
+:root[data-theme="dark"] .boot-bar span{box-shadow:0 0 12px rgba(255,200,61,.8)}
+@media (max-width:480px){
+  #theme-toggle{width:34px;height:34px;font-size:14px}
+  .nav-right{gap:8px}
+}
+/* ================= PREMIUM SLATE-GREY DARK (override layer) ================= */
+:root[data-theme="dark"]{
+  --navy:#22252B; --navy-2:#2B2F37; --navy-3:#343944;
+  --cyan:#F5C451; --violet:#D5D9E0; --gold:#F0B03A; --emerald:#FFD97A;
+  --white:#F3F4F6; --grey:#C5CAD3; --grey-dim:#9CA3B0;
+  --line:rgba(255,255,255,.12);
+}
+
+/* background: slate grey + silver/gold haze */
+:root[data-theme="dark"] .bg-field{
+  background:
+    radial-gradient(1100px 700px at 15% -10%, rgba(245,196,81,.10), transparent 60%),
+    radial-gradient(900px 600px at 90% 5%, rgba(213,217,224,.13), transparent 55%),
+    linear-gradient(180deg,#262A31,#1F2227 60%,#242830);
+  background-size:140% 140%;
+}
+
+/* ☁️ soft drifting clouds (CSS only) */
+:root[data-theme="dark"] .lightning::before,
+:root[data-theme="dark"] .lightning::after{content:"";position:absolute;inset:-15%;z-index:-1;pointer-events:none}
+:root[data-theme="dark"] .lightning::before{
+  background:
+    radial-gradient(520px 230px at 12% 16%, rgba(225,230,240,.15), transparent 70%),
+    radial-gradient(620px 260px at 80% 10%, rgba(225,230,240,.12), transparent 70%),
+    radial-gradient(560px 240px at 22% 82%, rgba(225,230,240,.10), transparent 70%);
+  animation:cloudA 70s ease-in-out infinite alternate;
+}
+:root[data-theme="dark"] .lightning::after{
+  background:
+    radial-gradient(600px 250px at 60% 48%, rgba(245,196,81,.07), transparent 70%),
+    radial-gradient(480px 220px at 90% 80%, rgba(225,230,240,.10), transparent 70%),
+    radial-gradient(500px 230px at 40% 30%, rgba(225,230,240,.08), transparent 70%);
+  animation:cloudB 95s ease-in-out infinite alternate;
+}
+@keyframes cloudA{from{transform:translate3d(-4%,0,0)}to{transform:translate3d(5%,3%,0)}}
+@keyframes cloudB{from{transform:translate3d(4%,2%,0)}to{transform:translate3d(-5%,-2%,0)}}
+
+/* 🖼️ LOGO: silver plate so the dark "CLOUDBROTHERSTECH" text is readable */
+:root[data-theme="dark"] .brand-logo-only{
+  background:linear-gradient(145deg,#F8F9FB,#D6DAE2);
+  padding:5px 14px; border-radius:14px; height:50px !important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.4),0 8px 24px rgba(0,0,0,.35),0 0 22px rgba(245,196,81,.2);
+}
+@media (max-width:480px){ :root[data-theme="dark"] .brand-logo-only{height:42px !important;padding:4px 10px} }
+
+/* header & floating UI */
+:root[data-theme="dark"] header{background:rgba(36,39,46,.80)}
+:root[data-theme="dark"] header.scrolled{background:rgba(36,39,46,.95)}
+:root[data-theme="dark"] .nav-drop-panel{background:#2B2F37}
+:root[data-theme="dark"] #mobile-menu{background:rgba(38,41,49,.98)}
+:root[data-theme="dark"] #cm-panel{background:rgba(40,43,51,.96)}
+:root[data-theme="dark"] #cm-tip,
+:root[data-theme="dark"] .smart-tag,
+:root[data-theme="dark"] .smart-float{background:#343944}
+:root[data-theme="dark"] #page-back-btn,
+:root[data-theme="dark"] #to-top{background:rgba(44,48,56,.95)}
+:root[data-theme="dark"] .cat-arrow{background:#3C414D}
+
+/* hero image: framed card instead of a plain white rectangle */
+:root[data-theme="dark"] .hero-visual-img{
+  border-radius:28px; border:1px solid rgba(255,255,255,.25); filter:none;
+  box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 60px rgba(245,196,81,.18);
+}
+
+/* all photos: silver plate + soft frame so they look natural on grey */
+:root[data-theme="dark"] .cat-media{background:linear-gradient(160deg,#F6F7F9,#D9DDE5)}
+:root[data-theme="dark"] .work-media{background:#E6E9EF}
+:root[data-theme="dark"] .svc-detail-media{
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:0 26px 60px rgba(0,0,0,.4),0 0 40px rgba(245,196,81,.12);
+  background:linear-gradient(160deg,#F6F7F9,#D9DDE5);
+}
+:root[data-theme="dark"] .team-avatar{box-shadow:0 0 0 3px rgba(255,255,255,.18)}
+
+/* cards: lighter slate glass */
+:root[data-theme="dark"] .svc-card,:root[data-theme="dark"] .svc-inc-card,:root[data-theme="dark"] .svc-step,
+:root[data-theme="dark"] .team-card,:root[data-theme="dark"] .founder-quote-card,:root[data-theme="dark"] .pv-item,
+:root[data-theme="dark"] .gallery-card{
+  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+  border-color:rgba(255,255,255,.13);
+}
+:root[data-theme="dark"] .cat-cloud,:root[data-theme="dark"] .cat-automation,
+:root[data-theme="dark"] .cat-digital,:root[data-theme="dark"] .cat-wedding,
+:root[data-theme="dark"] .wk-a,:root[data-theme="dark"] .wk-b,:root[data-theme="dark"] .wk-c,
+:root[data-theme="dark"] .wk-d,:root[data-theme="dark"] .wk-e,:root[data-theme="dark"] .wk-f,
+:root[data-theme="dark"] .wk-g,:root[data-theme="dark"] .wk-h,:root[data-theme="dark"] .wk-i{
+  background:linear-gradient(160deg,#343944,#2A2E36);border:1px solid rgba(255,255,255,.12);
+}
+:root[data-theme="dark"] #smart-solutions{background:linear-gradient(160deg,#30343D,#282B33);border:1px solid rgba(255,255,255,.12)}
+:root[data-theme="dark"] .brand-pill{background:#30343D}
+:root[data-theme="dark"] .leader-card{background:#31353E}
+:root[data-theme="dark"] .dark-band{background:linear-gradient(160deg,#31353E,#282B33);border:1px solid rgba(245,196,81,.22)}
+:root[data-theme="dark"] .dark-band .proc-num{background:#282B33}
+:root[data-theme="dark"] .cta-band{
+  background:linear-gradient(135deg,#363B46,#2A2E36);border:1px solid rgba(245,196,81,.45);
+  box-shadow:0 0 60px rgba(245,196,81,.14),inset 0 0 60px rgba(255,255,255,.04);
+}
+
+/* footer: charcoal grey, not black */
+:root[data-theme="dark"] .ft{background:linear-gradient(180deg,#2C3038,#23262D)}
+:root[data-theme="dark"] .ft-bottom{border-top-color:rgba(255,255,255,.14)}
+:root[data-theme="dark"] .ft-grid h4{color:rgba(255,255,255,.62)}
+/* ================= HERO IMAGE: bigger + frame fits image exactly ================= */
+.hero{ max-width:1360px; grid-template-columns:0.8fr 1.2fr; gap:32px; }
+.hero-visual{ height:auto !important; }
+.hero-visual-glow{ inset:4%; }
+.hero-visual-img{
+  width:100%; height:auto !important;
+  aspect-ratio:auto; object-fit:fill;
+  display:block;
+}
+@media (max-width:880px){
+  .hero{ grid-template-columns:1fr; }
+  .hero-visual{ height:auto !important; }
+}
+
 </style>
 </head>
 <body>
@@ -906,6 +1171,7 @@ header.scrolled{background:rgba(253,248,243,.92)}
     </nav>
     <div class="nav-right">
       <button class="cta-btn" onclick="document.getElementById('cm-orb').click()">Get Free Quote →</button>
+      <button id="theme-toggle" aria-label="Toggle theme" title="Dark / Light" onclick="toggleTheme()">⚡</button>
       <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open menu" onclick="toggleMobileMenu()">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
@@ -3050,6 +3316,35 @@ const SHEET_CONFIGURED = SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.indexOf('PASTE_'
   orb.addEventListener('click', ()=>{ seen = true; tip.classList.remove('on'); });
   setTimeout(()=>{ if(!seen) tip.classList.add('on'); }, 8000);
   setTimeout(()=> tip.classList.remove('on'), 16000);
+})();
+// ===== DARK THEME + LIGHTNING =====
+(function(){
+  const root = document.documentElement;
+  const btn = document.getElementById('theme-toggle');
+  const meta = document.querySelector('meta[name="theme-color"]');
+
+  // lightning layer, inserted right after .bg-field so content stays above it
+  const lt = document.createElement('div');
+  lt.className = 'lightning';
+  lt.innerHTML = '<div class="bolt-flash"></div>' +
+    '<svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">' +
+    '<path class="bolt b1" d="M180 0 L150 220 L215 240 L120 520 L190 540 L90 900"/>' +
+    '<path class="bolt b2" d="M820 0 L790 180 L850 200 L760 470 L820 490 L730 860"/>' +
+    '<path class="bolt b3" d="M500 0 L470 160 L520 175 L450 400 L505 415 L430 700"/>' +
+    '</svg>';
+  const bg = document.querySelector('.bg-field');
+  if(bg) bg.insertAdjacentElement('afterend', lt);
+
+  function apply(t){
+    root.setAttribute('data-theme', t);
+    if(btn) btn.textContent = t === 'dark' ? '☀️' : '⚡';
+    if(meta) meta.setAttribute('content', t === 'dark' ? '#0B0B0F' : '#FDF8F3');
+    try{ localStorage.setItem('cbt-theme', t); }catch(e){}
+  }
+  window.toggleTheme = function(){
+    apply(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  };
+  apply(root.getAttribute('data-theme') || 'dark');
 })();
 </script>
 </body>
