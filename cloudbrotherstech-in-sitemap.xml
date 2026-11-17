@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- CLOUDBROTHERSTECH is a single-page app (index.html) — every section and
+       service page is reached via hash routing on this one real URL, not
+       separate HTML files. Only list URLs that actually resolve. -->
+  <url>
+    <loc>https://cloudbrotherstech.in/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+</urlset>
