@@ -624,6 +624,19 @@
   .team-grid-2{ max-width:560px; grid-template-columns:repeat(2,1fr); }
   .team-grid-4{ max-width:1180px; grid-template-columns:repeat(4,1fr); }
   @media (max-width:900px){ .team-grid-4{ grid-template-columns:repeat(2,1fr); } }
+  .team-dept{ max-width:1180px; margin:0 auto 56px; }
+  .team-dept:last-child{ margin-bottom:0; }
+  .team-dept-label{
+    display:flex; align-items:center; gap:12px;
+    font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700;
+    color:var(--cyan); letter-spacing:.1em; text-transform:uppercase;
+    margin-bottom:24px;
+  }
+  .team-dept-label::before{
+    content:""; width:32px; height:3px; border-radius:3px; flex-shrink:0;
+    background:linear-gradient(90deg,var(--cyan),var(--violet));
+  }
+  .team-dept-label .team-dept-icon{ font-size:16px; letter-spacing:0; }
   .team-card{ border:1px solid var(--line); border-radius:var(--radius); padding:34px 26px; text-align:center;
     background:linear-gradient(180deg, rgba(184,193,236,0.04), rgba(184,193,236,0));
     transition: transform .22s cubic-bezier(.22,1,.36,1), border-color .22s ease, box-shadow .22s ease; }
@@ -1727,31 +1740,75 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
       <div class="eyebrow">OUR TEAM</div>
       <h2>The heads who keep every setup running.</h2>
     </div>
-    <div class="team-grid team-grid-4 reveal-stagger">
-      <div class="team-card">
-        <div class="team-avatar"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1792860348/loki_p8mm28.jpg" alt="Jatin Singh"></div>
-        <h3>Jatin Singh</h3>
-        <div class="team-role">DIGITAL MARKETING HEAD & EVENT MANAGER</div>
+    <div class="team-dept">
+      <div class="team-dept-label"><span class="team-dept-icon">🧭</span> Management</div>
+      <div class="team-grid team-grid-4 reveal-stagger">
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1792860348/loki_p8mm28.jpg" alt="Jatin Singh"></div>
+          <h3>Jatin Singh</h3>
+          <div class="team-role">DIGITAL MARKETING HEAD & EVENT MANAGER</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img class="avatar-zoom-abhishek" src="https://res.cloudinary.com/dfjegeiip/image/upload/v1790353129/thakur_fgmyns.jpg" alt="Abhishek Thakur"></div>
+          <h3>Abhishek Thakur</h3>
+          <div class="team-role">NETWORK SECURITY & CCTV HEAD</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795110872/Formal_Portrait_with_Blue_Tie.png" alt="Sanjay Gupta"></div>
+          <h3>Sanjay Gupta</h3>
+          <div class="team-role">CHIEF BUSINESS OFFICER</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795111006/Professional_Portrait_in_Cream_Blazer.png" alt="Deepak Mishra"></div>
+          <h3>Deepak Mishra</h3>
+          <div class="team-role">TENDER HEAD & ANALYST</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795109567/ChatGPT_Image_Sep_25_2026_12_48_36_AM.png" alt="Ram Namdev"></div>
+          <h3>Ram Namdev</h3>
+          <div class="team-role">MANAGEMENT & CONTROLLER HEAD</div>
+        </div>
       </div>
-      <div class="team-card">
-        <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1790660838/ChatGPT_Image_Sep_29_2026_11_14_46_AM.png" alt="Gaurav Pathak"></div>
-        <h3>Gaurav Pathak</h3>
-        <div class="team-role">MANAGEMENT & CONTROLLER HEAD</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><img class="avatar-zoom-abhishek" src="https://res.cloudinary.com/dfjegeiip/image/upload/v1790353129/thakur_fgmyns.jpg" alt="Abhishek Thakur"></div>
-        <h3>Abhishek Thakur</h3>
-        <div class="team-role">NETWORK SECURITY & CCTV HEAD</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1790438316/bus_abishe_x5scii.jpg" alt="Abhishek Yadav"></div>
-        <h3>Abhishek Yadav</h3>
-        <div class="team-role">BUSINESS MANAGER</div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1790438317/ChatGPT_Image_Sep_26_2026_09_03_58_PM_atzarj.png" alt="Gaurav Thakur"></div>
-        <h3>Gaurav Thakur</h3>
-        <div class="team-role">MARKETING HEAD</div>
+    </div>
+
+    <div class="team-dept">
+      <div class="team-dept-label"><span class="team-dept-icon">📣</span> Marketing</div>
+      <div class="team-grid team-grid-4 reveal-stagger">
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1790660838/ChatGPT_Image_Sep_29_2026_11_14_46_AM.png" alt="Gaurav Pathak"></div>
+          <h3>Gaurav Pathak</h3>
+          <div class="team-role">CLIENT ACQUISITION MANAGER</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1790438316/bus_abishe_x5scii.jpg" alt="Abhishek Yadav"></div>
+          <h3>Abhishek Yadav</h3>
+          <div class="team-role">BUSINESS MANAGER</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1790438317/ChatGPT_Image_Sep_26_2026_09_03_58_PM_atzarj.png" alt="Gaurav Thakur"></div>
+          <h3>Gaurav Thakur</h3>
+          <div class="team-role">MARKETING HEAD</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795110899/Formal_Pink_Suit_Portrait.png" alt="Rahul Sharma"></div>
+          <h3>Rahul Sharma</h3>
+          <div class="team-role">MARKETING MANAGER</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795110879/Formal_Corporate_Headshot.png" alt="Satish Kumar"></div>
+          <h3>Satish Kumar</h3>
+          <div class="team-role">MARKETING EXECUTIVE</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795110984/gauravkumar.jpg" alt="Gaurav Kumar"></div>
+          <h3>Gaurav Kumar</h3>
+          <div class="team-role">MARKETING EXECUTIVE</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="https://res.cloudinary.com/jzprzalx/image/upload/v1795110892/Confident_High-Angle_Portrait.png" alt="Aman Verma"></div>
+          <h3>Aman Verma</h3>
+          <div class="team-role">MARKETING EXECUTIVE</div>
+        </div>
       </div>
     </div>
   </section>
