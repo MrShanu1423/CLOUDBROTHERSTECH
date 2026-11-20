@@ -1405,14 +1405,14 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         <button class="cat-arrow" onclick="showPage('svc-bpo')" aria-label="View BPO & Customer Support details">→</button>
       </div>
       <div class="cat-card cat-manpower">
-        <div class="cat-icon" style="font-size:48px; margin-bottom:20px;">👷</div>
+        <div class="cat-icon" style="width:68px; height:68px; margin-bottom:20px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="7.5" r="3.3" fill="var(--cyan)"/><path d="M3 19.5c0-3.5 2.7-6.3 6-6.3s6 2.8 6 6.3" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="17.5" cy="8.5" r="2.7" fill="var(--violet)"/><path d="M14.7 19.5c.3-2.8 2.2-5 4.8-5" stroke="var(--violet)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></div>
         <h3>Manpower Supply Service</h3>
         <ul class="cat-list">
           <li>Skilled & Unskilled Staff Supply</li>
-          <li>BPO & Tele-Calling Staff</li>
+          <li>BPO, Domestic & International Calling Staff</li>
+          <li>Technical IT Support & Non-Technical Staff</li>
           <li>Security, Housekeeping & Field Staff</li>
           <li>Any Role, Any Post — Custom Hiring</li>
-          <li>Payroll & Compliance Handled by Us</li>
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-manpower')" aria-label="View Manpower Supply Service details">→</button>
       </div>
@@ -2789,12 +2789,13 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         <div class="svc-breadcrumb"><a onclick="showPage('home');scrollToId('services')">Services</a> / Manpower Supply Service</div>
         <div class="eyebrow">MANPOWER SUPPLY SERVICE · PAN-INDIA STAFFING</div>
         <h1 style="font-size:clamp(28px,3.8vw,46px); line-height:1.15; margin-bottom:16px;">Sahi staff chahiye? Hum supply karte hain, aap sirf kaam lijiye.</h1>
-        <p style="color:var(--grey); font-size:16px; line-height:1.65; max-width:520px;">CLOUDBROTHERSTECH ki Manpower Supply Service se aapko skilled aur unskilled workforce — security guards, housekeeping staff, warehouse labour, BPO/tele-calling staff, office aur field staff, ya koi bhi aur post ho — background-verified aur ready-to-deploy milte hain. Hiring, screening, payroll aur compliance ka poora bojh hamari team uthati hai, taaki aap sirf apna business chalayein.</p>
+        <p style="color:var(--grey); font-size:16px; line-height:1.65; max-width:520px;">CLOUDBROTHERSTECH ki Manpower Supply Service se aapko skilled aur unskilled workforce — security guards, housekeeping staff, warehouse labour, BPO/domestic/international calling staff, technical IT support, non-technical staff, office aur field staff, ya koi bhi aur post ho — background-verified aur ready-to-deploy milte hain. Hiring, screening, payroll aur compliance ka poora bojh hamari team uthati hai, taaki aap sirf apna business chalayein.</p>
         <ul class="svc-feat-list">
           <li>Skilled aur unskilled staff — dono categories ek hi jagah se</li>
           <li>Har candidate background-verified aur reference-checked</li>
           <li>Security guards, housekeeping, warehouse aur field staff</li>
-          <li>BPO/calling staff — inbound, outbound aur tele-sales ke liye bhi</li>
+          <li>BPO, domestic aur international calling staff — inbound, outbound, tele-sales</li>
+          <li>Technical IT support staff aur non-technical staff, dono</li>
           <li>Koi bhi post ho, custom requirement ke hisaab se hiring</li>
           <li>Daily, monthly ya long-term contract — flexible basis</li>
           <li>Payroll, ESI/PF aur statutory compliance hamari team karti hai</li>
@@ -2809,8 +2810,9 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
           <span class="svc-chip">Security guards</span>
           <span class="svc-chip">Housekeeping staff</span>
           <span class="svc-chip">Warehouse & godown labour</span>
-          <span class="svc-chip">BPO & calling staff</span>
-          <span class="svc-chip">Office & field staff</span>
+          <span class="svc-chip">Domestic & international calling staff</span>
+          <span class="svc-chip">Technical IT support</span>
+          <span class="svc-chip">Non-technical staff</span>
           <span class="svc-chip">Any role, any post</span>
         </div>
       </div>
@@ -3441,7 +3443,7 @@ const SHEET_CONFIGURED = SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.indexOf('PASTE_'
     { k:['refurbish','capex','purana','second hand','upgrade','emi'], a:'Refurbished Solutions se aap laptops, desktops ya servers upgrade kar sakte hain bina bade capex ke — poora plan ya partial, jo aapke budget mein fit baithe. Har device performance-tested aur verified hota hai, aur invoicing se warranty documentation tak sab paperwork hamari team karti hai. Aksar 60% tak lower cost par same reliable performance milta hai.' },
     { k:['new system','new office','naya office','branch','nayi shop','setup'], a:'New System Setup mein naye office ya branch ke liye hardware, software, networking aur security — sab ek saath, ek hi timeline par ready hoti hai. Security firewall aur access control default se configure hote hain, aur go-live ke baad bhi support included rehta hai — taaki launch day se hi aapki team sirf kaam ki soche.' },
     { k:['bpo','customer support','call center','call centre','chat support','email support','outsourc','back office','back-office','voice support','agent','agents'], a:'BPO & Customer Support mein aap bas apna process, SOPs aur quality standard bata dijiye — hum sahi logon ko hire karte hain, unhe aapke workflow par train karte hain, aur ek extension of your office ki tarah operate karte hain. Voice (inbound/outbound), chat, email support aur back-office operations (data entry, order processing, follow-ups) — sab cover hota hai, aapki zaroorat ke hisaab se team scale bhi hoti hai.' },
-    { k:['manpower','staff supply','staffing','security guard','housekeeping','labour','labor','contract staff','workforce','field staff','warehouse staff','calling staff','tele-calling','telecalling'], a:'Manpower Supply Service mein hum skilled aur unskilled workforce — security guards, housekeeping staff, warehouse labour, BPO/tele-calling staff, office aur field staff, ya koi bhi aur post ho — background-verified aur ready-to-deploy supply karte hain. Daily, monthly ya long-term contract basis par flexible staffing milti hai, aur payroll, ESI/PF aur statutory compliance ka poora bojh hamari team uthati hai.' },
+    { k:['manpower','staff supply','staffing','security guard','housekeeping','labour','labor','contract staff','workforce','field staff','warehouse staff','calling staff','tele-calling','telecalling','international calling','it support staff','technical staff','non-technical','non technical'], a:'Manpower Supply Service mein hum skilled aur unskilled workforce — security guards, housekeeping staff, warehouse labour, BPO/domestic/international calling staff, technical IT support staff, non-technical staff, office aur field staff, ya koi bhi aur post ho — background-verified aur ready-to-deploy supply karte hain. Daily, monthly ya long-term contract basis par flexible staffing milti hai, aur payroll, ESI/PF aur statutory compliance ka poora bojh hamari team uthati hai.' },
     { k:['security','firewall','vpn','encrypt','hack','virus','ransomware','safe','secure'], a:'Network Security mein firewall, VPN aur end-to-end encryption har setup mein default se configure hote hain — koi optional add-on nahi, ek baseline standard. Multiple branches ho ya remote staff, sabko ek hi secure VPN network se jodte hain, aur 24×7 real-time threat monitoring rehti hai taaki koi bhi breach kabhi surprise na bane.' },
     { k:['cctv','camera','surveillance','nvr','dvr','watch remotely'], a:'CCTV & Camera Setup mein site survey se lekar camera mounting, cabling aur mobile/laptop se remote viewing — sab end-to-end ek hi visit mein complete hota hai. Dukaan, office, factory ya warehouse — kahin bhi ho, aap apni jagah kahin se bhi live dekh sakte hain, aur footage NVR/DVR mein securely store hoti hai.' },
     { k:[' ai ','automation','automate','google sheet','sheets','excel','report','web app'], a:'AI Automation & Auto Reporting mein hum custom web apps aur AI-driven workflows design karte hain jo reports seedha Google Sheets mein real-time auto-generate karte hain — manual data entry poori tarah khatam. Billing, sales, inventory ya logistics — jahan bhi rozana ghanton ka data entry ho raha hai, wahan automation la kar hum woh time wapas aapke business ke liye free karte hain. Ownership 100% aapki rehti hai, koi third-party lock-in nahi.' },
