@@ -407,6 +407,7 @@
   .cat-digital{ background:linear-gradient(160deg, rgba(255,138,61,.12), rgba(255,138,61,.02)); }
   .cat-wedding{ background:linear-gradient(160deg, rgba(0,180,255,.14), rgba(255,138,61,.06)); }
   .cat-bpo{ background:linear-gradient(160deg, rgba(19,104,232,.12), rgba(0,180,255,.04)); }
+  .cat-manpower{ background:linear-gradient(160deg, rgba(255,138,61,.12), rgba(19,104,232,.04)); }
   @media (max-width:880px){ .cat-grid{ grid-template-columns:1fr; } }
   @media (max-width:480px){ .cat-card{ padding:28px 24px 64px; } }
   .svc-card{
@@ -973,7 +974,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
 /* service category cards */
 :root[data-theme="dark"] .cat-cloud,:root[data-theme="dark"] .cat-automation,
 :root[data-theme="dark"] .cat-digital,:root[data-theme="dark"] .cat-wedding,
-:root[data-theme="dark"] .cat-bpo{
+:root[data-theme="dark"] .cat-bpo,:root[data-theme="dark"] .cat-manpower{
   background:linear-gradient(160deg,#1A1A22,#121217);border:1px solid rgba(255,255,255,.08);
 }
 :root[data-theme="dark"] .cat-card:hover{box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 40px rgba(61,168,255,.18);border-color:rgba(61,168,255,.5)}
@@ -1147,7 +1148,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
 }
 :root[data-theme="dark"] .cat-cloud,:root[data-theme="dark"] .cat-automation,
 :root[data-theme="dark"] .cat-digital,:root[data-theme="dark"] .cat-wedding,
-:root[data-theme="dark"] .cat-bpo,
+:root[data-theme="dark"] .cat-bpo,:root[data-theme="dark"] .cat-manpower,
 :root[data-theme="dark"] .wk-a,:root[data-theme="dark"] .wk-b,:root[data-theme="dark"] .wk-c,
 :root[data-theme="dark"] .wk-d,:root[data-theme="dark"] .wk-e,:root[data-theme="dark"] .wk-f,
 :root[data-theme="dark"] .wk-g,:root[data-theme="dark"] .wk-h,:root[data-theme="dark"] .wk-i{
@@ -1211,6 +1212,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
           <a onclick="showPage('svc-security')">Network Security</a>
           <a onclick="showPage('svc-cctv')">CCTV & Camera</a>
           <a onclick="showPage('svc-bpo')">BPO & Customer Support</a>
+          <a onclick="showPage('svc-manpower')">Manpower Supply Service</a>
         </div>
       </div>
       <div class="nav-drop">
@@ -1268,6 +1270,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
   <a class="mm-link" onclick="mmGo('svc-security')">Network Security</a>
   <a class="mm-link" onclick="mmGo('svc-cctv')">CCTV & Camera</a>
   <a class="mm-link" onclick="mmGo('svc-bpo')">BPO & Customer Support</a>
+  <a class="mm-link" onclick="mmGo('svc-manpower')">Manpower Supply Service</a>
   <div class="mm-group-label">AI & BUSINESS AUTOMATION</div>
   <a class="mm-link" onclick="mmGo('svc-automation')">Automation & Dashboards</a>
   <div class="mm-group-label">DIGITAL GROWTH</div>
@@ -1400,6 +1403,18 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
           <li>Dedicated Agents for Your Workflow</li>
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-bpo')" aria-label="View BPO & Customer Support details">→</button>
+      </div>
+      <div class="cat-card cat-manpower">
+        <div class="cat-icon" style="font-size:48px; margin-bottom:20px;">👷</div>
+        <h3>Manpower Supply Service</h3>
+        <ul class="cat-list">
+          <li>Skilled & Unskilled Staff Supply</li>
+          <li>BPO & Tele-Calling Staff</li>
+          <li>Security, Housekeeping & Field Staff</li>
+          <li>Any Role, Any Post — Custom Hiring</li>
+          <li>Payroll & Compliance Handled by Us</li>
+        </ul>
+        <button class="cat-arrow" onclick="showPage('svc-manpower')" aria-label="View Manpower Supply Service details">→</button>
       </div>
     </div>
     </div>
@@ -2765,6 +2780,89 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
 </main>
 </div>
 
+<!-- ================= SERVICE DETAIL: MANPOWER SUPPLY ================= -->
+<div id="page-svc-manpower" class="page">
+<main>
+  <section style="padding-top:64px;">
+    <div class="wrap svc-detail-hero">
+      <div>
+        <div class="svc-breadcrumb"><a onclick="showPage('home');scrollToId('services')">Services</a> / Manpower Supply Service</div>
+        <div class="eyebrow">MANPOWER SUPPLY SERVICE · PAN-INDIA STAFFING</div>
+        <h1 style="font-size:clamp(28px,3.8vw,46px); line-height:1.15; margin-bottom:16px;">Sahi staff chahiye? Hum supply karte hain, aap sirf kaam lijiye.</h1>
+        <p style="color:var(--grey); font-size:16px; line-height:1.65; max-width:520px;">CLOUDBROTHERSTECH ki Manpower Supply Service se aapko skilled aur unskilled workforce — security guards, housekeeping staff, warehouse labour, BPO/tele-calling staff, office aur field staff, ya koi bhi aur post ho — background-verified aur ready-to-deploy milte hain. Hiring, screening, payroll aur compliance ka poora bojh hamari team uthati hai, taaki aap sirf apna business chalayein.</p>
+        <ul class="svc-feat-list">
+          <li>Skilled aur unskilled staff — dono categories ek hi jagah se</li>
+          <li>Har candidate background-verified aur reference-checked</li>
+          <li>Security guards, housekeeping, warehouse aur field staff</li>
+          <li>BPO/calling staff — inbound, outbound aur tele-sales ke liye bhi</li>
+          <li>Koi bhi post ho, custom requirement ke hisaab se hiring</li>
+          <li>Daily, monthly ya long-term contract — flexible basis</li>
+          <li>Payroll, ESI/PF aur statutory compliance hamari team karti hai</li>
+          <li>Short-notice aur bulk deployment dono handle karte hain</li>
+        </ul>
+        <div class="svc-stat-row">
+          <div><b>Pan-India</b><span>Staff deployment</span></div>
+          <div><b>Verified</b><span>Background-checked staff</span></div>
+          <div><b>Same-week</b><span>Deployment turnaround</span></div>
+        </div>
+        <div class="svc-chip-row">
+          <span class="svc-chip">Security guards</span>
+          <span class="svc-chip">Housekeeping staff</span>
+          <span class="svc-chip">Warehouse & godown labour</span>
+          <span class="svc-chip">BPO & calling staff</span>
+          <span class="svc-chip">Office & field staff</span>
+          <span class="svc-chip">Any role, any post</span>
+        </div>
+      </div>
+      <div class="svc-visual-panel" style="border-radius:18px; overflow:hidden; border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,0.12); display:block; min-height:0; background:var(--navy-2); padding:0;">
+        <div class="dash-mock" style="border:none; box-shadow:none; border-radius:0;">
+          <div class="dash-head"><span class="dash-dot" style="background:#ff5f57"></span><span class="dash-dot" style="background:#febc2e"></span><span class="dash-dot" style="background:#28c840"></span><span class="dash-title">Workforce Deployment</span></div>
+          <div class="dash-grid">
+            <div class="dash-card"><span class="dash-label">ACTIVE DEPLOYMENTS</span><div class="dash-bars"><i style="height:50%"></i><i style="height:75%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:70%"></i></div></div>
+            <div class="dash-card"><span class="dash-label">VERIFIED STAFF</span><div class="dash-ring"></div></div>
+            <div class="dash-card"><span class="dash-label">FILL TIME</span><div class="dash-line"></div></div>
+            <div class="dash-card"><span class="dash-label">RETENTION RATE</span><span class="dash-pct">94%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">WHAT'S INCLUDED</div>
+      <h2>Hiring se payroll tak, poora workforce management.</h2>
+    </div>
+    <div class="svc-inc-grid reveal-stagger">
+      <div class="svc-inc-card"><div class="svc-icon">🔍</div><h3>Sourcing & Verification</h3><p>Har candidate ka background check aur reference verification — sirf trustworthy staff hi deploy hota hai.</p></div>
+      <div class="svc-inc-card"><div class="svc-icon">🪪</div><h3>Flexible Deployment</h3><p>Daily, monthly ya long-term contract — aapki zaroorat ke hisaab se staff supply, short notice par bhi.</p></div>
+      <div class="svc-inc-card"><div class="svc-icon">📑</div><h3>Payroll & Compliance</h3><p>Salary processing, ESI/PF aur statutory compliance — poora paperwork hamari team sambhalti hai.</p></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">HOW WE DELIVER</div>
+      <h2>Requirement se deployed staff tak, in four steps.</h2>
+    </div>
+    <div class="svc-steps reveal-stagger">
+      <div class="svc-step"><h4>Share requirement</h4><p>Role, skills aur headcount samajhte hain.</p></div>
+      <div class="svc-step"><h4>Source & verify</h4><p>Sahi candidates shortlist karke background-check karte hain.</p></div>
+      <div class="svc-step"><h4>Deploy</h4><p>Staff site par ready-to-work bhejte hain, same-week.</p></div>
+      <div class="svc-step"><h4>Manage & support</h4><p>Payroll, compliance aur replacement — ongoing support ke saath.</p></div>
+    </div>
+  </section>
+
+  <section class="reveal" style="padding-top:0;">
+    <div class="cta-band">
+      <h2>Apni site ya office ke liye staff chahiye?</h2>
+      <p>CloudMitra se baat kijiye — apni zaroorat bataiye, hum same-week deployment plan karte hain.</p>
+      <button class="cta-btn" onclick="document.getElementById('cm-orb').click()">Talk to CloudMitra</button>
+    </div>
+  </section>
+</main>
+</div>
+
 <footer class="ft">
   <div class="ft-line"></div>
   <div class="ft-grid">
@@ -2780,6 +2878,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
       <a onclick="showPage('svc-cctv')">CCTV & Camera</a>
       <a onclick="showPage('svc-newsystem')">New Office Setup</a>
       <a onclick="showPage('svc-bpo')">BPO & Customer Support</a>
+      <a onclick="showPage('svc-manpower')">Manpower Supply Service</a>
     </div>
     <div>
       <h4>AUTOMATION & APPS</h4>
@@ -2903,7 +3002,8 @@ const PAGE_TITLES = {
   'svc-cctv': 'CCTV & Camera Installation | CLOUDBROTHERSTECH',
   'svc-refurb': 'Refurbished IT Solutions | CLOUDBROTHERSTECH',
   'svc-newsystem': 'New Office & Branch System Setup | CLOUDBROTHERSTECH',
-  'svc-bpo': 'BPO & Customer Support Outsourcing | CLOUDBROTHERSTECH'
+  'svc-bpo': 'BPO & Customer Support Outsourcing | CLOUDBROTHERSTECH',
+  'svc-manpower': 'Manpower Supply Service — Verified Staff Pan-India | CLOUDBROTHERSTECH'
 };
 function currentPageName(){
   const active = document.querySelector('.page.active');
@@ -2944,7 +3044,7 @@ function scrollToId(id){
 }
 (function(){
   const h = location.hash;
-  const svcPages = ['svc-cloud','svc-virtual','svc-automation','svc-webapp','svc-wedding','svc-physical','svc-security','svc-cctv','svc-refurb','svc-newsystem','svc-bpo'];
+  const svcPages = ['svc-cloud','svc-virtual','svc-automation','svc-webapp','svc-wedding','svc-physical','svc-security','svc-cctv','svc-refurb','svc-newsystem','svc-bpo','svc-manpower'];
   if(h === '#/about') showPage('about');
   else if(h === '#/privacy') showPage('privacy');
   else if(svcPages.includes(h.replace('#/',''))) showPage(h.replace('#/',''));
@@ -3109,7 +3209,7 @@ const SHEET_CONFIGURED = SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.indexOf('PASTE_'
     { key:'phone', q:'Dhanyavaad. Kripya apna phone number share karein, taaki hamari team aapse sampark kar sake.' },
     { key:'email', q:'Agar chahein to apna email bhi bata dein, updates ke liye (optional — "skip" likh sakte hain).', skippable:true },
     { key:'city', q:'Aap kis city se hain?' },
-    { key:'service', q:'Hum aapki kis service mein sahayata kar sakte hain?', options:['Physical Server','Virtual Server','Refurbished','Full Setup','Security','CCTV','AI Automation','BPO Support'] },
+    { key:'service', q:'Hum aapki kis service mein sahayata kar sakte hain?', options:['Physical Server','Virtual Server','Refurbished','Full Setup','Security','CCTV','AI Automation','BPO Support','Manpower Supply'] },
     { key:'budget', q:'Agar comfortable ho to rough budget range bata dein — isse behtar plan banane mein madad milegi (optional).', skippable:true },
     { key:'time', q:'Callback ke liye kaunsa time suvidhajanak rahega?' },
     { key:'message', q:'Koi khaas requirement ya sawaal ho to bataiye. (optional)', skippable:true }
@@ -3120,7 +3220,7 @@ const SHEET_CONFIGURED = SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.indexOf('PASTE_'
     { key:'name', q:'Bahut khoob! Review ke liye pehle apna naam bata dein (ya "skip" karke anonymous rahein).', skippable:true },
     { key:'phone', q:'Aap apna phone number bhi share kar sakte hain, taaki zaroorat padne par hamari team aapse sampark kar sake (optional).', skippable:true },
     { key:'city', q:'Aap kis city se hain? (optional)', skippable:true },
-    { key:'service', q:'Kis service ke liye review de rahe hain?', options:['Physical Server','Virtual Server','Refurbished','Full Setup','Security','CCTV','AI Automation','BPO Support'], skippable:true }
+    { key:'service', q:'Kis service ke liye review de rahe hain?', options:['Physical Server','Virtual Server','Refurbished','Full Setup','Security','CCTV','AI Automation','BPO Support','Manpower Supply'], skippable:true }
   ];
 
   const state = { started:false, mode:'menu', li:0, ri:0, leadData:{}, reviewData:{}, feedbackAsked:false, pendingRating:null, pendingLead:null };
@@ -3332,7 +3432,7 @@ const SHEET_CONFIGURED = SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.indexOf('PASTE_'
   const KB = [
     { k:[' hi ',' hii ',' hello ',' hey ','namaste','namaskar'], a:'Namaste! 😊 Main CloudMitra hoon, CLOUDBROTHERSTECH ka apna assistant. Cloud aur physical servers, network security, CCTV, AI automation ya kuch aur — jo bhi poochna ho, bejhijhak poochiye. Seedha callback chahiye to bhi bata dijiye.' },
     { k:['about','company kya','who are you','aap kaun','cloudbrothers kya','brand'], a:'CLOUDBROTHERSTECH ek pan-India cloud aur IT infrastructure company hai — hum businesses ko servers (physical aur virtual), network security, CCTV surveillance aur AI-based automation, sab ek hi chhat ke neeche dete hain. 500+ businesses hum par bharosa karte hain, aur hamari pehchaan hai: hardware jo aap khud own karte hain, security jo default se on hoti hai, aur ek support team jo phone uthati hai. Hum apna free tool platform bhi chalate hain — SantaPDFTools.com.' },
-    { k:['services','service kya','kya karte','what do you','offer','sab kuch','kya kya'], a:'Yeh raha hamara poora spectrum:\n☁️ Cloud Server Supply & Setup\n♻️ Refurbished Solutions (laptops/desktops/servers)\n🖥️ New System Setup (naya office/branch)\n🗄️ Physical RAC Servers — 2 saal warranty ke saath\n🧩 Virtual Servers — VPS / dedicated / shared\n🛡️ Network Security — firewall, VPN, encryption\n📹 CCTV & Camera Installation\n🤖 AI Automation & Auto Reporting (Google Sheets)\n🎧 BPO & Customer Support (voice, chat, email, back-office)\n📄 SantaPDFTools.com — 62+ free tools\nBataiye, kis par detail chahiye?' },
+    { k:['services','service kya','kya karte','what do you','offer','sab kuch','kya kya'], a:'Yeh raha hamara poora spectrum:\n☁️ Cloud Server Supply & Setup\n♻️ Refurbished Solutions (laptops/desktops/servers)\n🖥️ New System Setup (naya office/branch)\n🗄️ Physical RAC Servers — 2 saal warranty ke saath\n🧩 Virtual Servers — VPS / dedicated / shared\n🛡️ Network Security — firewall, VPN, encryption\n📹 CCTV & Camera Installation\n🤖 AI Automation & Auto Reporting (Google Sheets)\n🎧 BPO & Customer Support (voice, chat, email, back-office)\n👷 Manpower Supply Service (security, housekeeping, BPO calling staff, field & warehouse staff, any post)\n📄 SantaPDFTools.com — 62+ free tools\nBataiye, kis par detail chahiye?' },
     { k:['physical vs','vs cloud','difference','konsa better','kaunsa','which is better','which one','physical ya','cloud ya'], a:'Seedha farak samjha deta hoon:\n• Physical server — hardware poori tarah aapka apna, steady/heavy load ke liye best, on-premise control, koi monthly hosting bill nahi.\n• Virtual/cloud server — kam upfront cost, traffic ke saath minutes mein scale up/down, jaldi go-live.\nChhota ya tezi se badhta business ho to virtual se shuru karna aasaan rehta hai. Agar fixed heavy load hai ya data on-site rakhna zaroori hai, to physical sahi rahega. Aapka use-case bata dijiye, main sahi combo suggest karwa dunga.' },
     { k:['cloud server','cloud','hosting','host'], a:'Cloud Server Supply & Setup mein hum aapke exact workload aur budget ke hisaab se sourcing, configuration aur go-live — sab handle karte hain. Billing software, ERP, website ya secure file storage, sab ke liye sahi size ka server milta hai, aur business badhe to seamless scale-up bhi ho jaata hai. 24×7 monitoring aur 99.99% uptime SLA ke saath.' },
     { k:['physical','rac','rack','on-premise','on premise','apna server','own server'], a:'Physical RAC Servers poori tarah aapka owned hardware hote hain — na vendor lock-in, na leasing ki confusion. Sourcing se lekar rack mounting, cabling aur install tak sab kuch hamari team sambhalti hai, aur 2 saal ki comprehensive hardware warranty saath mein milti hai. Yeh un businesses ke liye best hai jo apna data on-site rakhna chahte hain ya predictable, one-time cost prefer karte hain.' },
@@ -3341,6 +3441,7 @@ const SHEET_CONFIGURED = SHEET_WEBHOOK_URL && SHEET_WEBHOOK_URL.indexOf('PASTE_'
     { k:['refurbish','capex','purana','second hand','upgrade','emi'], a:'Refurbished Solutions se aap laptops, desktops ya servers upgrade kar sakte hain bina bade capex ke — poora plan ya partial, jo aapke budget mein fit baithe. Har device performance-tested aur verified hota hai, aur invoicing se warranty documentation tak sab paperwork hamari team karti hai. Aksar 60% tak lower cost par same reliable performance milta hai.' },
     { k:['new system','new office','naya office','branch','nayi shop','setup'], a:'New System Setup mein naye office ya branch ke liye hardware, software, networking aur security — sab ek saath, ek hi timeline par ready hoti hai. Security firewall aur access control default se configure hote hain, aur go-live ke baad bhi support included rehta hai — taaki launch day se hi aapki team sirf kaam ki soche.' },
     { k:['bpo','customer support','call center','call centre','chat support','email support','outsourc','back office','back-office','voice support','agent','agents'], a:'BPO & Customer Support mein aap bas apna process, SOPs aur quality standard bata dijiye — hum sahi logon ko hire karte hain, unhe aapke workflow par train karte hain, aur ek extension of your office ki tarah operate karte hain. Voice (inbound/outbound), chat, email support aur back-office operations (data entry, order processing, follow-ups) — sab cover hota hai, aapki zaroorat ke hisaab se team scale bhi hoti hai.' },
+    { k:['manpower','staff supply','staffing','security guard','housekeeping','labour','labor','contract staff','workforce','field staff','warehouse staff','calling staff','tele-calling','telecalling'], a:'Manpower Supply Service mein hum skilled aur unskilled workforce — security guards, housekeeping staff, warehouse labour, BPO/tele-calling staff, office aur field staff, ya koi bhi aur post ho — background-verified aur ready-to-deploy supply karte hain. Daily, monthly ya long-term contract basis par flexible staffing milti hai, aur payroll, ESI/PF aur statutory compliance ka poora bojh hamari team uthati hai.' },
     { k:['security','firewall','vpn','encrypt','hack','virus','ransomware','safe','secure'], a:'Network Security mein firewall, VPN aur end-to-end encryption har setup mein default se configure hote hain — koi optional add-on nahi, ek baseline standard. Multiple branches ho ya remote staff, sabko ek hi secure VPN network se jodte hain, aur 24×7 real-time threat monitoring rehti hai taaki koi bhi breach kabhi surprise na bane.' },
     { k:['cctv','camera','surveillance','nvr','dvr','watch remotely'], a:'CCTV & Camera Setup mein site survey se lekar camera mounting, cabling aur mobile/laptop se remote viewing — sab end-to-end ek hi visit mein complete hota hai. Dukaan, office, factory ya warehouse — kahin bhi ho, aap apni jagah kahin se bhi live dekh sakte hain, aur footage NVR/DVR mein securely store hoti hai.' },
     { k:[' ai ','automation','automate','google sheet','sheets','excel','report','web app'], a:'AI Automation & Auto Reporting mein hum custom web apps aur AI-driven workflows design karte hain jo reports seedha Google Sheets mein real-time auto-generate karte hain — manual data entry poori tarah khatam. Billing, sales, inventory ya logistics — jahan bhi rozana ghanton ka data entry ho raha hai, wahan automation la kar hum woh time wapas aapke business ke liye free karte hain. Ownership 100% aapki rehti hai, koi third-party lock-in nahi.' },
