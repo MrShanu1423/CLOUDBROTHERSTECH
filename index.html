@@ -391,6 +391,24 @@
   .work-media{ margin:-28px -20px 16px; border-radius:18px 18px 0 0; overflow:hidden; background:rgba(0,0,0,.08); }
   .work-media img{ width:100%; height:160px; object-fit:cover; display:block; transition:transform .5s cubic-bezier(.16,1,.3,1); }
   .work-card:hover .work-media img{ transform:scale(1.06); }
+  .work-card::after{ content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--cyan),var(--violet)); opacity:0; transition:opacity .3s ease; }
+  .work-card:hover::after{ opacity:1; }
+  .work-icon-badge{
+    width:56px; height:56px; border-radius:16px; display:flex; align-items:center; justify-content:center;
+    font-size:27px; margin-bottom:16px; background:rgba(255,255,255,.75);
+    box-shadow:0 8px 20px rgba(26,19,51,0.1); transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
+  }
+  .work-card:hover .work-icon-badge{ transform:scale(1.1) rotate(-5deg); box-shadow:0 12px 26px rgba(19,104,232,.22); }
+  .work-tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:13px; }
+  .work-tag{ font-size:10px; font-weight:700; letter-spacing:.02em; color:var(--cyan); background:rgba(19,104,232,.1); padding:4px 10px; border-radius:100px; white-space:nowrap; }
+  .work-live-link{
+    display:inline-flex; align-items:center; gap:5px; margin-top:16px; font-size:12px; font-weight:700; color:#fff;
+    background:linear-gradient(90deg,var(--cyan),var(--violet)); padding:7px 15px; border-radius:100px;
+    box-shadow:0 6px 16px rgba(19,104,232,.22); transition:transform .22s cubic-bezier(.22,1,.36,1), box-shadow .22s ease;
+  }
+  .work-live-link:hover{ transform:translateY(-2px) scale(1.03); box-shadow:0 10px 22px rgba(19,104,232,.35); }
+  :root[data-theme="dark"] .work-icon-badge{ background:rgba(255,255,255,.07); box-shadow:0 0 16px rgba(61,168,255,.12); }
+  :root[data-theme="dark"] .work-tag{ background:rgba(61,168,255,.14); }
   .wk-a{ background:linear-gradient(160deg, rgba(19,104,232,.10), rgba(19,104,232,.02)); }
   .wk-b{ background:linear-gradient(160deg, rgba(0,180,255,.10), rgba(0,180,255,.02)); }
   .wk-c{ background:linear-gradient(160deg, rgba(255,138,61,.12), rgba(255,138,61,.02)); }
@@ -1336,7 +1354,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
     </div>
     <div class="cat-rail">
     <div class="cat-grid" id="cat-grid-3d">
-      <div class="cat-card cat-cloud">
+      <div class="cat-card cat-cloud" onclick="showPage('svc-cloud')" style="cursor:pointer;">
         <div class="cat-media"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1792590711/Powering_Your_Digital_Journey_purkgt.png" alt="Cloud & IT Infrastructure" loading="lazy"></div>
         <div class="cat-icon">☁️</div>
         <h3>Cloud & IT Infrastructure</h3>
@@ -1351,7 +1369,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-cloud')" aria-label="View Cloud & IT Infrastructure details">→</button>
       </div>
-      <div class="cat-card cat-automation">
+      <div class="cat-card cat-automation" onclick="showPage('svc-automation')" style="cursor:pointer;">
         <div class="cat-media"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1792590742/Smarter_Solutions_Automated_Growth_ounauq.png" alt="AI & Business Automation" loading="lazy"></div>
         <div class="cat-icon">🤖</div>
         <h3>AI & Business Automation</h3>
@@ -1365,7 +1383,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-automation')" aria-label="View AI & Business Automation details">→</button>
       </div>
-      <div class="cat-card cat-digital">
+      <div class="cat-card cat-digital" onclick="showPage('svc-webapp')" style="cursor:pointer;">
         <div class="cat-media"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1792590829/Web_Digital_Growth_Showcase_zntdvo.png" alt="Web & Digital Growth" loading="lazy"></div>
         <div class="cat-icon">📱</div>
         <h3>Web & Digital Growth</h3>
@@ -1378,7 +1396,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-webapp')" aria-label="View Web & Digital Growth details">→</button>
       </div>
-      <div class="cat-card cat-wedding">
+      <div class="cat-card cat-wedding" onclick="showPage('svc-wedding')" style="cursor:pointer;">
         <div class="cat-media"><img src="https://res.cloudinary.com/dfjegeiip/image/upload/v1792591113/Dream_Wedding_Services_Showcase_bosbqz.png" alt="Weddings & Creative Studio" loading="lazy"></div>
         <div class="cat-icon">💍</div>
         <h3>Weddings & Creative Studio</h3>
@@ -1392,7 +1410,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-wedding')" aria-label="View Weddings & Creative Studio details">→</button>
       </div>
-      <div class="cat-card cat-bpo">
+      <div class="cat-card cat-bpo" onclick="showPage('svc-bpo')" style="cursor:pointer;">
         <div class="cat-icon" style="font-size:48px; margin-bottom:20px;">🎧</div>
         <h3>BPO & Customer Support</h3>
         <ul class="cat-list">
@@ -1404,7 +1422,7 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
         </ul>
         <button class="cat-arrow" onclick="showPage('svc-bpo')" aria-label="View BPO & Customer Support details">→</button>
       </div>
-      <div class="cat-card cat-manpower">
+      <div class="cat-card cat-manpower" onclick="showPage('svc-manpower')" style="cursor:pointer;">
         <div class="cat-icon" style="width:68px; height:68px; margin-bottom:20px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="7.5" r="3.3" fill="var(--cyan)"/><path d="M3 19.5c0-3.5 2.7-6.3 6-6.3s6 2.8 6 6.3" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="17.5" cy="8.5" r="2.7" fill="var(--violet)"/><path d="M14.7 19.5c.3-2.8 2.2-5 4.8-5" stroke="var(--violet)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></div>
         <h3>Manpower Supply Service</h3>
         <ul class="cat-list">
@@ -2097,84 +2115,98 @@ body, .bg-field, .svc-card, .svc-inc-card, .team-card, .founder-quote-card, .gal
   <section class="reveal">
     <div class="section-head">
       <div class="eyebrow">REAL PROJECTS, REAL RESULTS</div>
-      <h2>Automation we've actually built and shipped.</h2>
-      <p>Yeh koi concept nahi hai — yeh live systems hain jo humne businesses ke liye bana kar deploy kiye hain.</p>
+      <h2>Restaurants se stock market tak — humne sab automate kiya hai.</h2>
+      <p>Yeh koi concept nahi hai — billing & POS systems, WhatsApp automation engines, trading apps, exam-prep platforms, affiliate bots aur dynamic web forms — yeh sab live products hain jo humne khud design, build aur deploy kiye hain.</p>
     </div>
     <div class="work-grid reveal-stagger">
       <div class="work-card wk-b" style="min-height:150px;">
         <div class="work-media"><img src="https://i.pinimg.com/736x/6c/ca/c0/6ccac08d87a5f824215b6d6db1a1d13c.jpg" alt="Sales Performance & Lead Analytics Dashboard" loading="lazy"></div>
-        <span class="work-icon">📈</span>
+        <div class="work-icon-badge">📈</div>
         <h3>Sales Performance & Lead Analytics Dashboard</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Interactive Looker Studio dashboard — leads, conversion rate, revenue, call analytics aur geography-wise sales, sab real-time visualize.</p>
+        <div class="work-tags"><span class="work-tag">Looker Studio</span><span class="work-tag">Google Sheets</span><span class="work-tag">Data Viz</span></div>
       </div>
       <div class="work-card wk-g" style="min-height:150px;">
         <div class="work-media"><img src="https://i.pinimg.com/736x/e4/c4/f7/e4c4f715a02ac43ccf099850dad6282d.jpg" alt="Executive Performance Analytics Report" loading="lazy"></div>
-        <span class="work-icon">📊</span>
+        <div class="work-icon-badge">📊</div>
         <h3>Executive Performance Analytics Report</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">5-6 alag Google Sheets ka data ek hi automated report mein integrate — executive-wise sales tracking, quotation monitoring aur dynamic performance scoring ke saath.</p>
+        <div class="work-tags"><span class="work-tag">IMPORTRANGE</span><span class="work-tag">QUERY</span><span class="work-tag">Google Sheets</span></div>
       </div>
       <div class="work-card wk-e" style="min-height:150px;">
-        <span class="work-icon">🍽️</span>
+        <div class="work-icon-badge">🍽️</div>
         <h3>P Food'z Cafe — Restaurant & Canteen Management App</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">PetPooja-style complete restaurant/canteen system — billing & sales, inventory with expiry tracking, staff attendance & payroll, reorder alerts, purchase/stock-in, daily market kharcha, rate-change history aur 10+ auto-generated reports — sab Google Sheets se live-synced. Installable PWA app, koi separate database nahi.</p>
-        <a href="https://p-foodz-cafe.netlify.app/" target="_blank" rel="noopener" style="display:inline-block; margin-top:10px; font-size:12px; font-weight:700; color:var(--cyan);">View Live →</a>
+        <div class="work-tags"><span class="work-tag">Google Sheets</span><span class="work-tag">PWA</span><span class="work-tag">Billing & Payroll</span></div>
+        <a href="https://p-foodz-cafe.netlify.app/" target="_blank" rel="noopener" class="work-live-link">View Live →</a>
       </div>
       <div class="work-card wk-e" style="min-height:150px;">
-        <span class="work-icon">📦</span>
+        <div class="work-icon-badge">📦</div>
         <h3>Stock & Inventory Entry Management System</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Multi-company product catalog, shop/godown-wise stock tracking, pending stock monitoring aur complete audit history — Google Sheets + Apps Script par built.</p>
+        <div class="work-tags"><span class="work-tag">Google Sheets</span><span class="work-tag">Apps Script</span><span class="work-tag">SKU Management</span></div>
       </div>
       <div class="work-card wk-c" style="min-height:150px;">
-        <span class="work-icon">🧾</span>
+        <div class="work-icon-badge">🧾</div>
         <h3>MPS Billing System — GST Billing & CRM</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Auto-invoice generation, GST calculation, real-time billing aur customer follow-up CRM — ek hi platform mein, one-click WhatsApp share ke saath.</p>
+        <div class="work-tags"><span class="work-tag">GST</span><span class="work-tag">CRM</span><span class="work-tag">WhatsApp API</span></div>
       </div>
       <div class="work-card wk-a" style="min-height:150px;">
-        <span class="work-icon">🤖</span>
+        <div class="work-icon-badge">🤖</div>
         <h3>AI-Powered Business Automation Platform</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Handwritten bill OCR scanning, multi-godown warehouse intelligence, GST-compliant billing aur predictive stock alerts — ek hi PWA app mein, 90% manual work reduce karke.</p>
+        <div class="work-tags"><span class="work-tag">OCR</span><span class="work-tag">AI/ML</span><span class="work-tag">PWA</span></div>
       </div>
       <div class="work-card wk-i" style="min-height:150px;">
-        <span class="work-icon">💊</span>
+        <div class="work-icon-badge">💊</div>
         <h3>Billing Management System — Multi-Industry</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">PetPooja-jaisa billing & sales system — har industry ke liye customize, medical/pharmacy billing software samet. Google Sheets integrated, real-time stock-billing sync ke saath.</p>
+        <div class="work-tags"><span class="work-tag">Google Sheets</span><span class="work-tag">Medical Billing</span><span class="work-tag">Multi-Industry</span></div>
       </div>
       <div class="work-card wk-d" style="min-height:150px;">
-        <span class="work-icon">💬</span>
+        <div class="work-icon-badge">💬</div>
         <h3>Smart WhatsApp Automation Engine — Zero Monthly Cost</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Self-running WhatsApp engine, 3 Google Sheets ko live database ki tarah use karta hai (customer info, templates, status). Active-number auto-detection, due-date/payment-status filtering aur sahi template selection khud karta hai. Smart queue se rate-limit/block avoid, human-like typing delay, QR-based persistent session (dobara login nahi), real-time sent/failed/queued dashboard aur CSV audit reports. Business API ya monthly SaaS fee — dono zero.</p>
+        <div class="work-tags"><span class="work-tag">WhatsApp API</span><span class="work-tag">Google Sheets</span><span class="work-tag">n8n</span></div>
       </div>
       <div class="work-card wk-h" style="min-height:150px;">
-        <span class="work-icon">🧮</span>
+        <div class="work-icon-badge">🧮</div>
         <h3>Smart Billing & Inventory System</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Dynamic invoice generation, real-time stock tracking aur Looker Studio dashboard, date-wise edit/update ke saath — stock discrepancies poori tarah khatam.</p>
+        <div class="work-tags"><span class="work-tag">Looker Studio</span><span class="work-tag">Apps Script</span></div>
       </div>
       <div class="work-card wk-i" style="min-height:150px;">
-        <span class="work-icon">🛒</span>
+        <div class="work-icon-badge">🛒</div>
         <h3>Multi-Platform Affiliate Automation Bot</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Product deals auto-fetch karke Telegram, Instagram aur Facebook par formatted posts — APIs aur scheduling workflows se fully automated cross-platform affiliate marketing.</p>
+        <div class="work-tags"><span class="work-tag">Telegram API</span><span class="work-tag">Instagram API</span><span class="work-tag">n8n</span></div>
       </div>
       <div class="work-card wk-f" style="min-height:150px;">
-        <span class="work-icon">📱</span>
+        <div class="work-icon-badge">📱</div>
         <h3>Trading App — Stocks + Crypto + AI</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Ek hi app mein stock market aur crypto trading, AI-powered buy/sell suggestions ke saath.</p>
+        <div class="work-tags"><span class="work-tag">AI/ML</span><span class="work-tag">Stocks</span><span class="work-tag">Crypto</span></div>
       </div>
       <div class="work-card wk-e" style="min-height:150px;">
-        <span class="work-icon">📝</span>
+        <div class="work-icon-badge">📝</div>
         <h3>Dynamic Web Forms — Google Sheets Integrated</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">Business-specific dynamic web forms jo seedha Google Sheets mein data save karte hain — orders, enquiries, registrations, kuch bhi. Bajpai Traders iska live example hai, aur aise bahut saare forms alag-alag businesses ke liye bana chuke hain.</p>
-        <a href="https://bajpai-traders.netlify.app/" target="_blank" rel="noopener" style="display:inline-block; margin-top:10px; font-size:12px; font-weight:700; color:var(--cyan);">View Live →</a>
+        <div class="work-tags"><span class="work-tag">Google Sheets</span><span class="work-tag">Web Forms</span></div>
+        <a href="https://bajpai-traders.netlify.app/" target="_blank" rel="noopener" class="work-live-link">View Live →</a>
       </div>
       <div class="work-card wk-h" style="min-height:150px;">
-        <span class="work-icon">📊</span>
+        <div class="work-icon-badge">📊</div>
         <h3>Excel Automation — VBA Macros</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">VBA macros se Excel-based business processes automate — repetitive data entry, calculations aur reporting ka kaam, bina kisi web app ke, seedha Excel ke andar hi solve.</p>
+        <div class="work-tags"><span class="work-tag">Excel</span><span class="work-tag">VBA</span></div>
       </div>
       <div class="work-card wk-c" style="min-height:150px;">
-        <span class="work-icon">🎯</span>
+        <div class="work-icon-badge">🎯</div>
         <h3>SSC Prep Hub — SSC CGL Exam Preparation Platform</h3>
         <p style="color:var(--grey-dim); font-size:12.5px; margin-top:8px; line-height:1.5;">100+ mock tests, live current affairs, daily quiz, AI tutor, topic-wise practice, mistake notebook aur progress tracking — SSC CGL aspirants ke liye ek complete exam-prep platform. Built by Sagar Singh — Business Automation Expert.</p>
-        <a href="https://sagarthakur-task.netlify.app/" target="_blank" rel="noopener" style="display:inline-block; margin-top:10px; font-size:12px; font-weight:700; color:var(--cyan);">View Live →</a>
+        <div class="work-tags"><span class="work-tag">AI Tutor</span><span class="work-tag">Mock Tests</span><span class="work-tag">PWA</span></div>
+        <a href="https://sagarthakur-task.netlify.app/" target="_blank" rel="noopener" class="work-live-link">View Live →</a>
       </div>
     </div>
   </section>
